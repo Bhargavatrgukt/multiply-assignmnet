@@ -5,11 +5,6 @@ const TodoSchema = new mongoose.Schema({
   todoId:{
     type: mongoose.Schema.Types.ObjectId,
   } , 
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true,
-  },
   title: {
     type: String,
     required: true,

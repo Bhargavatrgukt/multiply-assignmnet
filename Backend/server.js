@@ -5,12 +5,14 @@ import cookieParser from 'cookie-parser';
 import authRoutes from './auth/route.js';
 import todoRoutes from './auth/todos.route.js'; // Correct path to your todoRoutes file
 import connectToMongoDb from './db/connectToMongoDb.js';
+import cors from 'cors';
 
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use(cors())
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use(cookieParser())
 
